@@ -2,7 +2,7 @@ module.exports = {
   title: '侠客的博客',
   description: '记录学习日常',
   lang: 'zh-cn',
-  base: '/vitepress/',
+  base: process.env.NODE_ENV === 'production' ? '/vitepress/' : '/',
   themeConfig: {
     nav: [
       { text: 'CSS', link: '/CSS' },
